@@ -1,0 +1,43 @@
+<ion-split-pane when="md" contentId="page-content">
+
+  <ion-menu contentId="page-content" menuId="my-menu" id="myMenu" type="push">
+    <ion-header color="primary">
+      <ion-toolbar color="primary">
+        <ion-title>Menu #1</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content no-padding>
+      <ion-list class="menu-items ion-no-padding">
+
+        <ion-menu-toggle auto-hide="false">
+          <ion-item class="text-menu" [routerLink]="['/home', 'one']" routerLinkActive="active-item">
+            <ion-icon slot="start" name="home" class="menu-icon"></ion-icon>
+            <ion-label>Component One</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle auto-hide="false">
+          <ion-item class="text-menu" [routerLink]="['/home', 'two']" routerLinkActive="active-item">
+            <ion-icon slot="start" name="home" class="menu-icon"></ion-icon>
+            <ion-label>Component Two</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle auto-hide="false">
+          <ion-item class="text-menu" [routerLink]="['/second']" routerLinkActive="active-item">
+            <ion-icon slot="start" name="home" class="menu-icon"></ion-icon>
+            <ion-label>Page 2 with menu #2</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+
+  <ion-router-outlet id="page-content">
+  </ion-router-outlet>
+
+
+</ion-split-pane>
